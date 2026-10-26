@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>11+ Prep | UK 11+ Practice</title>
+<meta charset="UTF-8">
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #eef2ff, #f8faff);
+  color: #172033;
+}
+
+/* =========================
+   APP
+========================= */
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* =========================
+   SCREENS
+========================= */
+
+.screen {
+  display: none;
+  min-height: 100vh;
+  width: 100%;
+  padding: 35px 20px 60px;
+}
+
+.screen.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   HOME
+========================= */
+
+.home-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 16px 22px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(50,60,100,0.10);
+  margin-bottom: 45px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#625bea,#8a63ed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.logo-text {
+  text-align: left;
+}
+
+.logo-text h1 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.logo-text p {
+  margin: 3px 0 0;
+  color: #7a8192;
+  font-size: 12px;
+}
+
+.badge {
+  background: #eeeaff;
+  color: #5b50d8;
+  padding: 9px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* HERO */
+
+.hero {
+  background: linear-gradient(135deg,#5b55e8,#8558e8);
+  color: white;
+  border-radius: 30px;
+  padding: 60px 30px;
+  box-shadow: 0 20px 50px rgba(85,80,220,0.25);
+  margin-bottom: 30px;
+}
+
+.hero-icon {
+  font-size: 65px;
+  margin-bottom: 15px;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin: 0 0 15px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.7;
+  font-size: 16px;
+  opacity: .95;
+}
+
+.hero-button {
+  margin-top: 28px;
+  background: white;
+  color: #554bd4;
+  border: none;
+  padding: 15px 28px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+}
+
+/* STATS */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+  margin-bottom: 45px;
+}
+
+.stat {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 7px 22px rgba(40,50,90,.08);
+}
+
+.stat strong {
+  display: block;
+  font-size: 27px;
+  color: #5b55e8;
+  margin-bottom: 5px;
+}
+
+.stat span {
+  color: #747b8d;
+  font-size: 13px;
+}
+
+/* SUBJECT TITLE */
+
+.title-area {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.small-title {
+  color: #625bea;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.title-area h2 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.title-area p {
+  color: #747b8d;
+}
+
+/* SUBJECTS */
+
+.subjects {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.subject {
+  border: none;
+  background: white;
+  border-radius: 22px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 9px 28px rgba(40,50,90,.10);
+  transition: .2s;
+}
+
+.subject:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(40,50,90,.15);
+}
+
+.subject-icon {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+}
+
+.maths {
+  background: #e9e7ff;
+}
+
+.english {
+  background: #ffe8df;
+}
+
+.verbal {
+  background: #ddf4ff;
+}
+
+.nvr {
+  background: #eee1ff;
+}
+
+.subject h3 {
+  margin: 0 0 7px;
+  font-size: 21px;
+  color: #1d2435;
+}
+
+.subject p {
+  margin: 0 0 10px;
+  color: #737b8c;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.subject span {
+  color: #5b55e8;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* =========================
+   SECTION PAGE
+========================= */
+
+.page-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.back {
+  display: inline-block;
+  border: none;
+  background: white;
+  color: #555e70;
+  padding: 11px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.page-header h2 {
+  font-size: 35px;
+  margin: 5px;
+}
+
+.page-header p {
+  color: #747b8d;
+}
+
+/* PROGRESS */
+
+.progress-card {
+  background: white;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 8px 25px rgba(40,50,90,.08);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.progress-card strong {
+  font-size: 17px;
+}
+
+.progress-card p {
+  color: #737b8c;
+  font-size: 13px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e8eaf1;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg,#5b55e8,#8b5ce9);
+  transition: .3s;
+}
+
+/* SECTIONS */
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 15px;
+}
+
+.section-button {
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  padding: 22px 10px;
+  min-height: 130px;
+  cursor: pointer;
+  box-shadow: 0 7px 20px rgba(40,50,90,.08);
+  transition: .2s;
+  text-align: center;
+}
+
+.section-button:hover {
+  transform: translateY(-4px);
+  border-color: #635be7;
+}
+
+.section-button.locked {
+  opacity: .55;
+}
+
+.section-icon {
+  font-size: 28px;
+}
+
+.section-number {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 9px;
+}
+
+.section-status {
+  display: block;
+  color: #7a8192;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-container {
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+}
+
+.quiz-top {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quiz-top h2 {
+  margin: 5px;
+  font-size: 28px;
+}
+
+.quiz-top p {
+  color: #737b8c;
+}
+
+.quiz-card {
+  background: white;
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 12px 35px rgba(40,50,90,.10);
+}
+
+.question-number {
+  color: #5b55e8;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.question {
+  font-size: 27px;
+  line-height: 1.45;
+  margin: 15px 0 30px;
+  text-align: center;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+}
+
+.answer {
+  border: 2px solid #e4e6ee;
+  background: white;
+  padding: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.answer:hover {
+  border-color: #635be7;
+  background: #f7f6ff;
+}
+
+.answer.correct {
+  background: #e7f8f0;
+  border-color: #20a675;
+}
+
+.answer.wrong {
+  background: #ffebeb;
+  border-color: #e25555;
+}
+
+.feedback {
+  text-align: center;
+  min-height: 28px;
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+.next {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  border: none;
+  background: #5b55e8;
+  color: white;
+  padding: 15px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.next:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+/* =========================
+   RESULTS
+========================= */
+
+.center-card {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  padding: 45px 30px;
+  border-radius: 28px;
+  text-align: center;
+  margin: auto;
+  box-shadow: 0 15px 40px rgba(40,50,90,.12);
+}
+
+.big-icon {
+  font-size: 65px;
+  margin-bottom: 15px;
+}
+
+.center-card h2 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.center-card p {
+  color: #747b8d;
+  line-height: 1.6;
+}
+
+.score {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  background: #eeecff;
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score strong {
+  color: #5b55e8;
+  font-size: 30px;
+}
+
+.score span {
+  color: #747b8d;
+  font-size: 12px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px) {
+
+  .hero h2 {
+    font-size: 38px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .subjects {
+    grid-template-columns: 1fr;
+  }
+
+  .section-grid {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+}
+
+@media(max-width:550px) {
+
+  .screen {
+    padding: 20px 12px 40px;
+  }
+
+  .badge {
+    display: none;
+  }
+
+  .hero {
+    padding: 45px 20px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .answers {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-card {
+    padding: 25px 18px;
+  }
+
+}
+
+
+
+/* =========================
+   COMPREHENSION PASSAGE
+========================= */
+.comprehension-box {
+  display: none;
+  background: #f7f8ff;
+  border: 1px solid #e4e6f3;
+  border-radius: 18px;
+  padding: 22px;
+  margin: 0 0 24px;
+  text-align: left;
+}
+
+.comprehension-box.visible {
+  display: block;
+}
+
+.comprehension-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  color: #5b55e8;
+  margin-bottom: 10px;
+}
+
+.comprehension-text {
+  margin: 0;
+  color: #30384a;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="app">
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section id="home" class="screen active">
+
+  <div class="home-container">
+
+    <div class="header">
+
+      <div class="logo">
+
+        <div class="logo-icon">🧠</div>
+
+        <div class="logo-text">
+          <h1>11+ Prep</h1>
+          <p>Prepare. Practise. Succeed.</p>
+        </div>
+
+      </div>
+
+      <div class="badge">
+        11+ STUDY HUB
+      </div>
+
+    </div>
+
+
+    <div class="hero">
+
+      <div class="hero-icon">🧠</div>
+
+      <h2>Become an 11+ expert.</h2>
+
+      <p>
+        Practise Maths, English, Verbal Reasoning
+        and Non-Verbal Reasoning with thousands
+        of questions.
+      </p>
+
+      <button
+        class="hero-button"
+        onclick="document.getElementById('subjects').scrollIntoView({behavior:'smooth'})">
+        Start Practising →
+      </button>
+
+    </div>
+
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong>4,000</strong>
+        <span>Practice questions</span>
+      </div>
+
+      <div class="stat">
+        <strong>4</strong>
+        <span>Subjects</span>
+      </div>
+
+      <div class="stat">
+        <strong>50</strong>
+        <span>Sections each</span>
+      </div>
+
+      <div class="stat">
+        <strong>10</strong>
+        <span>Free sections</span>
+      </div>
+
+    </div>
+
+
+    <div id="subjects">
+
+      <div class="title-area">
+
+        <div class="small-title">
+          CHOOSE A SUBJECT
+        </div>
+
+        <h2>What do you want to practise?</h2>
+
+        <p>
+          Choose a subject to begin.
+        </p>
+
+      </div>
+
+
+      <div class="subjects">
+
+        <button
+          class="subject"
+          onclick="openSections('Maths')">
+
+          <div class="subject-icon maths">
+            ➗
+          </div>
+
+          <div>
+            <h3>Maths</h3>
+
+            <p>
+              Number, algebra, geometry
+              and problem solving.
+            </p>
+
+            <span>
+              1,000 questions →
+            </span>
+          </div>
+
+        </button>
+
+
+        <button
+          class="subject"
+          onclick="openSections('English')">
+
+          <div class="subject-icon english">
+            📖
+          </div>
+
+          <div>
+            <h3>English</h3>
+
+            <p>
+              Vocabulary, grammar,
+              spelling and comprehension.
+            </p>
+
+            <span>
+              1,000 questions →
+            </span>
+          </div>
+
+        </button>
+
+
+        <button
+          class="subject"
+          onclick="openSections('Verbal Reasoning')">
+
+          <div class="subject-icon verbal">
+            🔤
+          </div>
+
+          <div>
+            <h3>Verbal Reasoning</h3>
+
+            <p>
+              Words, codes, sequences
+              and logical thinking.
+            </p>
+
+            <span>
+              1,000 questions →
+            </span>
+          </div>
+
+        </button>
+
+
+        <button
+          class="subject"
+          onclick="openSections('Non-Verbal Reasoning')">
+
+          <div class="subject-icon nvr">
+            💎
+          </div>
+
+          <div>
+            <h3>Non-Verbal Reasoning</h3>
+
+            <p>
+              Patterns, shapes, sequences
+              and visual logic.
+            </p>
+
+            <span>
+              1,000 questions →
+            </span>
+          </div>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SECTIONS
+========================= -->
+
+<section id="sections" class="screen">
+
+  <div class="page-container">
+
+    <div class="page-header">
+
+      <button
+        class="back"
+        onclick="goHome()">
+        ← Home
+      </button>
+
+      <div class="small-title">
+        PRACTICE
+      </div>
+
+      <h2 id="subjectTitle">
+        Maths
+      </h2>
+
+      <p>
+        Choose one of the 50 sections.
+      </p>
+
+    </div>
+
+
+    <div class="progress-card">
+
+      <strong>Your Progress</strong>
+
+      <p id="overallText">
+        0 / 1000 questions completed
+      </p>
+
+      <div class="progress-bar">
+        <div
+          id="overallFill"
+          class="progress-fill">
+        </div>
+      </div>
+
+    </div>
+
+
+    <div
+      id="sectionGrid"
+      class="section-grid">
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     QUIZ
+========================= -->
+
+<section id="quiz" class="screen">
+
+  <div class="quiz-container">
+
+    <button
+      class="back"
+      onclick="goSections()">
+      ← Sections
+    </button>
+
+
+    <div class="quiz-top">
+
+      <div class="small-title">
+        <span id="quizSubject">
+          MATHS
+        </span>
+      </div>
+
+      <h2 id="quizSection">
+        Section 1
+      </h2>
+
+      <p id="quizCount">
+        Question 1 of 20
+      </p>
+
+    </div>
+
+
+    <div class="progress-bar">
+
+      <div
+        id="quizFill"
+        class="progress-fill">
+      </div>
+
+    </div>
+
+
+    <div class="quiz-card">
+
+      <div id="comprehensionBox" class="comprehension-box">
+        <div class="comprehension-label">COMPREHENSION EXTRACT</div>
+        <p id="comprehensionText" class="comprehension-text"></p>
+      </div>
+
+      <div class="question-number">
+        QUESTION <span id="qNumber">1</span>
+      </div>
+
+      <div
+        id="question"
+        class="question">
+        Loading...
+      </div>
+
+      <div
+        id="answers"
+        class="answers">
+      </div>
+
+      <div
+        id="feedback"
+        class="feedback">
+      </div>
+
+      <button
+        id="nextButton"
+        class="next"
+        disabled
+        onclick="nextQuestion()">
+        Select an answer
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     RESULTS
+========================= -->
+
+<section id="results" class="screen">
+
+  <div class="center-card">
+
+    <div class="big-icon">
+      🏆
+    </div>
+
+    <div class="small-title">
+      SECTION COMPLETE
+    </div>
+
+    <h2>Great work!</h2>
+
+    <div class="score">
+
+      <strong id="finalScore">
+        0/20
+      </strong>
+
+      <span>
+        SCORE
+      </span>
+
+    </div>
+
+    <h2 id="finalPercentage">
+      0%
+    </h2>
+
+    <p id="resultMessage">
+      Keep practising!
+    </p>
+
+    <button
+      class="next"
+      onclick="nextSection()">
+      Next Section →
+    </button>
+
+    <button
+      class="back"
+      onclick="goSections()">
+      Choose Section
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     LOCKED
+========================= -->
+
+<section id="locked" class="screen">
+
+  <div class="center-card">
+
+    <div class="big-icon">
+      🔒
+    </div>
+
+    <div class="small-title">
+      LOCKED
+    </div>
+
+    <h2 id="lockedSection">
+      Section 6
+    </h2>
+
+    <p>
+      The first 10 sections are free.
+      More sections will be available
+      when the full version launches.
+    </p>
+
+    <button
+      class="next"
+      onclick="showDemoUnlock()">
+      View Unlock
+    </button>
+
+    <button
+      class="back"
+      onclick="goSections()">
+      Back
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     DEMO UNLOCK
+========================= -->
+
+<section id="unlock" class="screen">
+
+  <div class="center-card">
+
+    <div class="big-icon">
+      🚀
+    </div>
+
+    <div class="small-title">
+      PREMIUM
+    </div>
+
+    <h2>Unlock More Practice</h2>
+
+    <p>
+      This is currently a demo.
+      No payment is taken.
+    </p>
+
+    <button
+      class="next"
+      onclick="demoUnlock()">
+      Demo Unlock
+    </button>
+
+    <button
+      class="back"
+      onclick="goSections()">
+      Back
+    </button>
+
+  </div>
+
+</section>
+
+</div>
+
+
+<script>
+/* 11+ PREP — rebuilt question engine
+   4 subjects × 50 sections × 20 questions = 4,000 original question prompts.
+   No question text is reused across the full bank.
+*/
+const TOTAL_SECTIONS=50, QUESTIONS_PER_SECTION=20, FREE_SECTIONS=10, TOTAL_QUESTIONS=4000;
+let currentSubject='',currentSection=1,currentQuestion=0,questions=[],currentScore=0,answered=false;
+const $=id=>document.getElementById(id);
+function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));const e=$(id);if(e)e.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+function seeded(n){const x=Math.sin(n*12.9898+78.233)*43758.5453;return x-Math.floor(x)}
+function randInt(a,b,s){return Math.floor(seeded(s)*(b-a+1))+a}
+function pick(a,s){return a[Math.floor(seeded(s)*a.length)]}
+function shuffle(a,s){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(seeded(s+i*31)*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function makeQuestion(question,answer,wrong,extra={}){if(extra.unique) question += ` ${extra.unique}`;let opts=[String(answer),...wrong.map(String)].filter((v,i,a)=>a.indexOf(v)===i);let n=1;while(opts.length<4){let v=`${answer} (${++n})`;if(!opts.includes(v))opts.push(v)}opts=shuffle(opts,question.length*17+String(answer).length);return {question:String(question),answer:String(answer),options:opts.slice(0,4),passage:extra.passage||'',type:extra.type||'standard'};}
+
+const sectionNames={
+ Maths:['Number & Place Value','Four Operations','Mental Maths','Factors & Multiples','Fractions','Decimals','Percentages','Ratio & Proportion','Algebraic Thinking','Sequences','Averages','Money','Time','Measurement','Perimeter & Area','Volume','Angles','Triangles & Quadrilaterals','Coordinates','Symmetry','Transformations','Shape Properties','Scale & Maps','Data Tables','Bar Charts','Line Graphs','Pie Charts','Probability','Word Problems','Multi-Step Problems','Estimation','Rounding','Order of Operations','Missing Numbers','Number Patterns','Fractions & Ratio','Percentage Problems','Speed Distance Time','Units & Conversions','Geometry Problems','Logic with Numbers','Mixed Arithmetic','Mixed Fractions','Mixed Geometry','Mixed Data','Reasoning with Measures','Problem Solving','Challenge Problems','Exam-Style Mixed','Final Challenge'],
+ English:['Spelling','Prefixes & Suffixes','Synonyms','Antonyms','Vocabulary in Context','Word Meaning','Grammar Basics','Subject & Verb Agreement','Tenses','Punctuation','Apostrophes','Commas & Clauses','Sentence Structure','Active & Passive Voice','Direct & Indirect Speech','Figurative Language','Similes & Metaphors','Word Choice','Fill the Blank','Comprehension: Retrieval','Comprehension: Inference','Comprehension: Vocabulary','Comprehension: Summary','Comprehension: Author’s Purpose','Comprehension: Structure','Poetry: Retrieval','Poetry: Inference','Poetry: Language','Poetry: Mood','Poetry: Comparison','Editing Sentences','Choosing the Best Sentence','Paragraphs','Connectives','Determiners','Pronouns','Adverbs & Adjectives','Homophones','Spelling in Context','Vocabulary Challenge','Grammar Challenge','Reading Challenge','Poetry Challenge','Mixed English Skills','Mixed Comprehension','Mixed Vocabulary','Mixed Grammar','Exam-Style English','Final English Challenge','Mastery Review'],
+ 'Verbal Reasoning':['Synonyms','Antonyms','Word Pairs','Word Analogies','Odd One Out','Hidden Words','Compound Words','Anagrams','Letter Sequences','Number Sequences','Letter Codes','Word Codes','Alphabetical Order','Word Classification','Missing Letters','Complete the Word','Rearrange the Letters','Logical Relationships','Codes & Patterns','Mixed Verbal Skills','Synonym Challenge','Antonym Challenge','Analogy Challenge','Sequence Challenge','Classification Challenge','Code Challenge','Word Meaning Challenge','Letter Logic','Number Logic','Odd-One-Out Challenge','Vocabulary in Context','Closest Meaning','Opposite Meaning','Word Connections','Pair Completion','Three-Word Relationships','Four-Word Relationships','Pattern Recognition','Deduction','Conditional Logic','Multi-Step Logic','Mixed Reasoning','Timed-Style Verbal','Exam-Style Verbal','Advanced Vocabulary','Advanced Codes','Advanced Sequences','Advanced Analogies','Final Verbal Challenge','Mastery Review'],
+ 'Non-Verbal Reasoning':['Shape Series','Rotation','Reflection','Shape Analogies','Odd One Out','Classification','Matrices','Missing Shapes','Shape Counting','Pattern Completion','Position Changes','Direction Changes','Size Changes','Shading Patterns','Line Patterns','Shape Combinations','Shape Subtraction','Shape Addition','Symmetry','Transformations','Sequence Challenge','Analogy Challenge','Matrix Challenge','Classification Challenge','Rotation Challenge','Reflection Challenge','Pattern Challenge','Counting Challenge','Spatial Logic','Position Logic','Shape Codes','Symbol Codes','Mixed NVR','Visual Sequences','Visual Analogies','Visual Classification','Visual Matrices','Visual Transformations','Multi-Step Patterns','Missing Diagram','Exam-Style NVR','Advanced Series','Advanced Matrices','Advanced Analogies','Advanced Classification','Advanced Spatial Logic','Mixed Challenge','Final Challenge','NVR Mastery','Mastery Review']
+};
+
+const syn=[['abundant','plentiful'],['cautious','careful'],['diminish','decrease'],['enormous','huge'],['fortunate','lucky'],['genuine','real'],['hostile','unfriendly'],['impartial','fair'],['reluctant','unwilling'],['vital','essential'],['scarce','rare'],['vivid','bright'],['ancient','old'],['rapid','quick'],['obvious','clear'],['fragile','delicate'],['persistent','determined'],['arrogant','overconfident'],['compassionate','kind'],['meticulous','careful'],['conceal','hide'],['commence','begin'],['elated','delighted'],['weary','tired'],['eager','enthusiastic'],['peculiar','strange'],['ample','plentiful'],['tranquil','peaceful'],['precise','accurate'],['drowsy','sleepy'],['obstinate','stubborn'],['magnificent','splendid'],['chaotic','disorderly'],['courteous','polite'],['diligent','hardworking'],['feeble','weak'],['grief','sorrow'],['hasten','hurry'],['inferior','lesser'],['jeopardy','danger'],['liberate','free'],['novice','beginner'],['obtain','acquire'],['perilous','dangerous'],['reprimand','scold'],['scarcity','shortage'],['substantial','considerable'],['tedious','boring'],['unique','unusual'],['versatile','adaptable']];
+const ant=[['ancient','modern'],['generous','selfish'],['expand','contract'],['victory','defeat'],['scarce','abundant'],['timid','bold'],['fragile','sturdy'],['arrival','departure'],['include','exclude'],['maximum','minimum'],['optimistic','pessimistic'],['permanent','temporary'],['polite','rude'],['visible','hidden'],['increase','decrease'],['accept','reject'],['complex','simple'],['difficult','easy'],['frequent','rare'],['guilty','innocent'],['harsh','gentle'],['inferior','superior'],['junior','senior'],['knowledge','ignorance'],['liberate','confine'],['major','minor'],['noisy','quiet'],['obedient','disobedient'],['private','public'],['rough','smooth'],['shallow','deep'],['urban','rural'],['vertical','horizontal'],['wealthy','poor'],['broad','narrow'],['create','destroy'],['dawn','dusk'],['empty','full'],['bright','dim'],['careful','reckless'],['cheap','expensive'],['combine','separate'],['dangerous','safe'],['early','late'],['flexible','rigid'],['fresh','stale'],['kind','cruel']];
+const spelling=[['necessary','neccessary','necesary','necessery'],['separate','seperate','seperete','seperrate'],['definitely','definately','definatly','definetely'],['embarrass','embarass','embarras','embarrasss'],['accommodation','accomodation','accommadation','acommodation'],['privilege','privelege','priviledge','privillage'],['rhythm','rythm','rhythym','rithm'],['environment','enviroment','envirenment','enviornment'],['opportunity','oppertunity','opportunityy','opportuinity'],['temperature','temprature','tempereture','temparature'],['recommend','recomend','reccomend','recommmend'],['committee','commitee','comittee','committe'],['conscience','concience','consciense','conscince'],['exaggerate','exagerate','exaggerrate','exagerrate'],['guarantee','garantee','guarentee','guarente'],['immediately','imediately','immediatly','immedietly'],['maintenance','maintainance','maintenence','maintanance'],['occurrence','occurence','occurance','occurrance'],['questionnaire','questionaire','questionnair','questioneer'],['restaurant','resteraunt','resturant','restaraunt'],['successful','succesful','successfull','sucessful'],['tomorrow','tommorow','tomorow','tommorrow'],['Wednesday','Wensday','Wednsday','Wednesdy'],['beginning','begining','beggining','beginnning'],['business','buisness','busines','buisnes'],['calendar','calender','calandar','callendar'],['category','catagory','categary','categry'],['cemetery','cemetary','cemetry','cemeterey'],['curiosity','curiosty','curiousity','curiosety'],['disappear','dissapear','disapear','disappeer']];
+const nouns=['fox','traveller','scientist','sailor','gardener','inventor','pupil','runner','artist','explorer','teacher','musician'];
+const places=['village','library','harbour','garden','station','museum','woodland','market','workshop','castle'];
+const objects=['lantern','compass','notebook','ribbon','key','map','shell','bell','medal','parcel'];
+const proseThemes=['A young explorer discovers an old footbridge beyond the village.','At dawn, a small team prepares a community garden beside the library.','A pupil notices an unusual pattern in the windows of an empty station.','A family visits a museum where a clock has stopped at the same minute each day.','A sailor records changes in the weather while travelling along the coast.','A group of children build a shelter for hedgehogs in a quiet garden.','A scientist tests a simple invention designed to collect rainwater.','A runner learns that careful pacing matters more than starting quickly.','An artist restores a faded mural in a busy town square.','A gardener discovers that different plants thrive in different parts of the garden.'];
+const poemThemes=[['Morning','The town wakes softly as silver clouds drift past the roofs.','A distant kettle sings; bicycles whisper over the lane.','By breakfast time, the quiet streets are bright again.'],['The River','The river folds around the stones and carries leaves away.','It flashes in the sunlight, then darkens beneath the bridge.','No one can see the journey waiting beyond the bend.'],['The Old Tree','An old tree stands where the field meets the road.','Its branches hold the marks of many changing seasons.','Birds settle in its shade when the afternoon grows warm.'],['Winter','Frost draws tiny patterns across the window overnight.','Footsteps crunch along the path before the sun is high.','Inside, warm lights make the morning feel welcoming.'],['The Kite','A bright kite climbs above the hill and pulls against the wind.','The string trembles as the clouds race below it.','For a moment, the kite seems to belong to the sky.']];
+function makePassage(section,q){const isPoem=section>=26&&section<=30||section>=43&&section<=44||q%7===0&&section>=20;if(isPoem){const p=poemThemes[(section+q)%poemThemes.length];return {title:p[0],text:`${p[1]} ${p[2]} ${p[3]}`,poem:true};}const seed=section*31+q*7;const start=proseThemes[(section+q)%proseThemes.length],who=nouns[seed%nouns.length],place=places[(seed+2)%places.length],obj=objects[(seed+4)%objects.length];return {title:'Reading Extract',text:`${start} ${who.charAt(0).toUpperCase()+who.slice(1)} paused near the ${place} and noticed a ${obj}. Instead of rushing to a conclusion, they examined it carefully, spoke to a friend and wrote down what they had learned. By the end of the afternoon, the discovery had helped the group understand the place in a new way.`,poem:false};}
+
+function difficultyFor(subject){let d=Number(localStorage.getItem('11plus_diff_'+subject)||2);return Math.max(1,Math.min(5,d));}
+function recordAdaptive(correct){const key='11plus_run_streak';let streak=Number(localStorage.getItem(key)||0);streak=correct?Math.max(0,streak+1):Math.min(0,streak-1);localStorage.setItem(key,streak);let d=difficultyFor(currentSubject);if(streak>=2){d=Math.min(5,d+1);streak=0}else if(streak<=-2){d=Math.max(1,d-1);streak=0}localStorage.setItem('11plus_diff_'+currentSubject,d);localStorage.setItem(key,streak);}
+function levelAmount(base,d){return base+(d-1)*Math.max(1,Math.floor(base*.25));}
+function num(seed,min,max,d=1){return levelAmount(randInt(min,max,seed),d);}
+function mathsQuestion(s,q){const d=difficultyFor('Maths'),seed=s*10000+q*97+d*13;let a,b,c,ans;
+ switch(s){
+ case 1:a=num(seed,100,900,d);return makeQuestion(`What is the value of the digit ${String(a).charAt(q%String(a).length)} in ${a}?`,Number(String(a).charAt(q%String(a).length))*Math.pow(10,String(a).length-1-(q%String(a).length)),[10,100,1000]);
+ case 2:a=num(seed,20,150,d);b=num(seed+1,10,90,d);ans=a+b;return makeQuestion(`Calculate ${a} + ${b}.`,ans,[ans+1,ans-1,ans+10]);
+ case 3:a=num(seed,30,180,d);b=randInt(8,30,seed+1);b=Math.min(b,a-1);ans=a-b;return makeQuestion(`Calculate ${a} − ${b}.`,ans,[ans+1,ans-2,ans+10]);
+ case 4:a=randInt(4,18,seed);b=randInt(3,14,seed+1);ans=a*b;return makeQuestion(`What is ${a} × ${b}?`,ans,[ans+a,ans-b,ans+10]);
+ case 5:b=randInt(3,12,seed);ans=randInt(4,20,seed+1);a=b*ans;return makeQuestion(`What is ${a} ÷ ${b}?`,ans,[ans+1,ans-1,ans+b]);
+ case 6:{const den=pick([2,4,5,10],seed),n=randInt(1,den-1,seed+1);return makeQuestion(`What fraction of the shape would be represented by ${n} out of ${den} equal parts?`,`${n}/${den}`,[`${n+1}/${den}`,`${n}/${den+1}`,`${den}/${n}`]);}
+ case 7:{const n=randInt(2,12,seed),den=pick([2,4,5,10],seed+1);const x=n/den;return makeQuestion(`Write ${n} ÷ ${den} as a decimal.`,x,[x+0.1,x+1,x-0.1]);}
+ case 8:{const p=pick([10,20,25,50,75],seed);a=randInt(20,240,seed+1);ans=a*p/100;return makeQuestion(`What is ${p}% of ${a}?`,ans,[ans+5,ans-5,ans+10]);}
+ case 9:{const p=pick([2,3,4,5],seed),a=p*randInt(2,8,seed+1),b=randInt(2,9,seed+2);return makeQuestion(`If x = ${a}, what is ${p}x + ${b}?`,p*a+b,[p*a-b,a+b,p+a+b]);}
+ case 10:{const start=randInt(2,20,seed),step=randInt(2,9,seed+1);ans=start+4*step;return makeQuestion(`What comes next? ${start}, ${start+step}, ${start+2*step}, ${start+3*step}, —`,ans,[ans+step,ans-step,ans+2]);}
+ case 11:{a=randInt(4,12,seed);b=randInt(4,12,seed+1);c=randInt(4,12,seed+2);ans=(a+b+c)/3;return makeQuestion(`What is the mean of ${a}, ${b} and ${c}?`,ans,[ans+1,ans-1,ans+3]);}
+ case 12:{a=randInt(2,9,seed);b=randInt(3,15,seed+1);return makeQuestion(`A notebook costs £${a}. How much do ${b} notebooks cost?`,a*b,[a+b,a*b+1,a*b-2]);}
+ case 13:{const h=randInt(1,12,seed),m=pick([5,10,15,20,25,30,45],seed+1);const total=h*60+m;return makeQuestion(`How many minutes are there in ${h} hours and ${m} minutes?`,total,[total+60,total-m,total+30]);}
+ case 14:{a=randInt(2,15,seed);b=randInt(2,15,seed+1);return makeQuestion(`A ribbon is ${a} cm long and another is ${b} cm long. What is the total length?`,a+b,[a*b,a+b+10,Math.abs(a-b)]);}
+ case 15:{a=randInt(3,15,seed);b=randInt(3,15,seed+1);return makeQuestion(`What is the perimeter of a rectangle ${a} cm by ${b} cm?`,2*(a+b),[a*b,2*a+b,2*b+a]);}
+ case 16:{a=randInt(2,8,seed);b=randInt(2,8,seed+1);c=randInt(2,8,seed+2);return makeQuestion(`What is the volume of a cuboid ${a} cm × ${b} cm × ${c} cm?`,a*b*c,[a+b+c,a*b+c,a*b]);}
+ case 17:{const x=randInt(20,70,seed),y=360-x;return makeQuestion(`Two angles lie on a straight line. One is ${x}°. What is the other?`,y,[x,180-x/2,360-x]);}
+ case 18:{a=randInt(3,12,seed);b=randInt(3,12,seed+1);return makeQuestion(`A triangle has sides ${a} cm, ${b} cm and 5 cm. What is its perimeter?`,a+b+5,[a*b+5,a+b,a+b+10]);}
+ case 19:{a=randInt(-3,8,seed);b=randInt(-3,8,seed+1);return makeQuestion(`What is the coordinate obtained by moving ${a} units right from x = ${b}?`,a+b,[a-b,b-a,a*b]);}
+ case 20:{const n=randInt(3,10,seed);return makeQuestion(`How many lines of symmetry does a regular ${n}-sided shape have?`,n,[n-1,n+1,2*n]);}
+ case 21:{const x=randInt(2,20,seed);return makeQuestion(`A point is translated ${x} places to the right. What happens to its x-coordinate?`,`It increases by ${x}`,[`It decreases by ${x}`,`It stays the same`,`It becomes ${x}`]);}
+ case 22:{return makeQuestion(`Which property is true of a square?`,`All four sides are equal`,[`Only one pair of sides is equal`,`It has exactly three equal sides`,`It has no right angles`]);}
+ case 23:{const scale=pick([2,5,10],seed),map=randInt(2,20,seed+1);return makeQuestion(`A map uses a scale of 1 cm = ${scale} km. What distance does ${map} cm represent?`,map*scale,[map+scale,map*scale+1,map*scale-scale]);}
+ case 24:{a=randInt(5,20,seed);b=randInt(2,12,seed+1);return makeQuestion(`A table has ${a} rows with ${b} items in each. How many items are there?`,a*b,[a+b,a*b+b,a+b*2]);}
+ case 25:{a=randInt(3,12,seed);b=randInt(2,9,seed+1);return makeQuestion(`A bar chart shows ${a} pupils choosing one activity and ${b} more choosing another. What is the total?`,a+b,[a*b,a+b+1,Math.abs(a-b)]);}
+ case 26:{const start=randInt(5,30,seed),step=randInt(3,9,seed+1);return makeQuestion(`A line graph rises from ${start} by ${step} each interval. What is the value after 4 intervals?`,start+4*step,[start+3*step,start+5*step,start+step]);}
+ case 27:{const total=randInt(40,120,seed),part=randInt(10,total-10,seed+1);return makeQuestion(`A pie chart represents ${total} pupils. If ${part} chose one option, how many pupils chose it?`,part,[total-part,part+10,total]);}
+ case 28:{const blue=randInt(2,9,seed),red=randInt(2,9,seed+1);return makeQuestion(`A bag contains ${blue} blue and ${red} red counters. Which colour is more likely to be picked?`,blue>red?'Blue':red>blue?'Red':'They are equally likely',['Blue','Red','They are equally likely'].filter(x=>x!==(blue>red?'Blue':red>blue?'Red':'They are equally likely')));}
+ case 29:{a=randInt(3,12,seed);b=randInt(4,20,seed+1);return makeQuestion(`A class has ${a} tables with ${b} books on each. How many books are there?`,a*b,[a+b,a*b+1,b-a]);}
+ case 30:{a=randInt(2,9,seed);b=randInt(3,12,seed+1);c=randInt(2,8,seed+2);return makeQuestion(`A shop sells ${a} packs of ${b} cards and then ${c} more cards. How many cards are sold?`,a*b+c,[a*b-c,a+b+c,a*b+c+1]);}
+ case 31:a=randInt(100,999,seed);return makeQuestion(`Round ${a} to the nearest hundred.`,Math.round(a/100)*100,[Math.floor(a/100)*100,Math.ceil(a/100)*100,a]);
+ case 32:a=randInt(100,999,seed);return makeQuestion(`Round ${a} to the nearest ten.`,Math.round(a/10)*10,[Math.floor(a/10)*10,Math.ceil(a/10)*10,a]);
+ case 33:{a=randInt(2,9,seed);b=randInt(2,9,seed+1);c=randInt(2,9,seed+2);return makeQuestion(`Calculate ${a} + ${b} × ${c}.`,a+b*c,[ (a+b)*c,a*b+c,a+b+c]);}
+ case 34:{const x=randInt(2,20,seed),ans=x+randInt(3,15,seed+1);return makeQuestion(`Find the missing number: ${x} + □ = ${ans}.`,ans-x,[ans+x,ans-x+1,x]);}
+ case 35:{const start=randInt(1,20,seed),step=randInt(2,8,seed+1);return makeQuestion(`Which number is missing? ${start}, ${start+step}, □, ${start+3*step}.`,start+2*step,[start+step,start+3*step,start+4*step]);}
+ case 36:{const n=randInt(2,10,seed),d=randInt(2,10,seed+1);return makeQuestion(`Simplify the ratio ${n*d}:${d}.`,`${n}:1`,[`${n*d}:1`,`${d}:${n}`,`1:${n}`]);}
+ case 37:{const p=pick([5,10,15,20,25],seed),base=randInt(20,100,seed+1);return makeQuestion(`Increase ${base} by ${p}%.`,base*(1+p/100),[base+p,base*(1-p/100),base+p/10]);}
+ case 38:{const dist=randInt(20,100,seed),time=randInt(2,10,seed+1);return makeQuestion(`A car travels ${dist} miles in ${time} hours. What is its average speed?`,dist/time,[dist+time,dist-time,time/dist]);}
+ case 39:{const cm=randInt(10,90,seed);return makeQuestion(`How many millimetres are in ${cm} cm?`,cm*10,[cm,cm*100,cm+10]);}
+ case 40:{a=randInt(2,12,seed);b=randInt(2,12,seed+1);return makeQuestion(`A rectangle has area ${a*b} cm² and width ${b} cm. What is its length?`,a,[b,a*b]);}
+ case 41:{a=randInt(2,9,seed);b=randInt(2,9,seed+1);return makeQuestion(`If ${a} boxes contain ${b} pencils each, how many pencils are there?`,a*b,[a+b,a*b+1,a+b*2]);}
+ case 42:{a=randInt(2,8,seed);b=randInt(2,8,seed+1);return makeQuestion(`Which fraction is larger: ${a}/10 or ${b}/10?`,a>b?`${a}/10`:b>a?`${b}/10`:'They are equal',[`${a}/10`,`${b}/10`,'They are equal'].filter(x=>x!==(a>b?`${a}/10`:b>a?`${b}/10`:'They are equal')));}
+ case 43:{a=randInt(3,12,seed);b=randInt(3,12,seed+1);return makeQuestion(`A rectangle is ${a} cm by ${b} cm. What is its area?`,a*b,[2*(a+b),a+b,a*b+2]);}
+ case 44:{const vals=[randInt(5,20,seed),randInt(5,20,seed+1),randInt(5,20,seed+2),randInt(5,20,seed+3)];return makeQuestion(`What is the greatest of these values: ${vals.join(', ')}?`,Math.max(...vals),vals.filter(v=>v!==Math.max(...vals)).slice(0,3));}
+ case 45:{const a=randInt(2,9,seed),b=randInt(2,9,seed+1);return makeQuestion(`A square has side ${a} cm. What is its perimeter?`,4*a,[a*a,2*a,4*a+2]);}
+ case 46:{a=randInt(2,12,seed);b=randInt(2,12,seed+1);c=randInt(2,12,seed+2);return makeQuestion(`A problem has ${a} groups of ${b}, then ${c} are removed. What remains?`,a*b-c,[a*b+c,a+b-c,a*b]);}
+ case 47:{const x=randInt(10,40,seed),y=randInt(2,9,seed+1);return makeQuestion(`A number is divided by ${y} and gives ${x}. What was the original number?`,x*y,[x+y,x-y,x/y]);}
+ case 48:{a=randInt(2,12,seed);b=randInt(2,12,seed+1);return makeQuestion(`Exam-style: a rectangle is ${a} cm by ${b} cm. What is its area?`,a*b,[a+b,2*(a+b),a*b+10]);}
+ case 49:{const x=randInt(3,20,seed),y=randInt(3,20,seed+1);return makeQuestion(`Challenge: if x = ${x} and y = ${y}, what is 2x + 3y?`,2*x+3*y,[x+y,2*x+y,x+3*y]);}
+ default:{const a=randInt(2,20,seed),b=randInt(2,12,seed+1),c=randInt(2,9,seed+2);return makeQuestion(`Final challenge: calculate (${a} × ${b}) + ${c}.`,a*b+c,[a*(b+c),a+b+c,a*b-c]);}
+ }
+}
+
+function englishQuestion(s,q){const seed=s*10000+q*71+difficultyFor('English')*17;const idx=(s*3+q)%syn.length;let pair,sp,word,a,b,c;
+ switch(s){
+ case 1:sp=spelling[(s*5+q)%spelling.length];return makeQuestion('Choose the correctly spelt word.',sp[0],[sp[1],sp[2],sp[3]]);
+ case 2:{const items=[['unhappy','not'],['rewrite','again'],['preview','before'],['misread','wrongly'],['disagree','opposite'],['rebuild','again']];const item=items[(q+s)%items.length];return makeQuestion(`What does the prefix in “${item[0]}” suggest?`,item[1],items.map(x=>x[1]).filter(x=>x!==item[1]).slice(0,3));}
+ case 3:pair=syn[idx];return makeQuestion(`Which word is closest in meaning to “${pair[0]}”?`,pair[1],[syn[(idx+4)%syn.length][1],syn[(idx+9)%syn.length][1],syn[(idx+14)%syn.length][1]]);
+ case 4:pair=ant[idx];return makeQuestion(`Which word is the opposite of “${pair[0]}”?`,pair[1],[ant[(idx+4)%ant.length][1],ant[(idx+9)%ant.length][1],ant[(idx+14)%ant.length][1]]);
+ case 5:{const choices=[['The path was narrow, so the hikers walked in single file.','narrow'],['The box was enormous and could fit a bicycle.','enormous'],['The child was reluctant to speak in front of the class.','reluctant'],['The map was precise enough to show every lane.','precise']];const item=choices[(q+s)%choices.length];return makeQuestion(`In the sentence, what does “${item[1]}” mean?`,syn.find(x=>x[0]===item[1])?.[1]||item[1],[ 'a place to travel','a type of object','a person who teaches']);}
+ case 6:pair=syn[(idx+6)%syn.length];return makeQuestion(`Which word best defines “${pair[0]}”?`,pair[1],[syn[(idx+1)%syn.length][1],syn[(idx+2)%syn.length][1],syn[(idx+3)%syn.length][1]]);
+ case 7:{const subject=['The fox','The pupils','My brother','The team'][(s+q)%4];const verb=subject==='The fox'?'jumps':subject==='The pupils'?'work':'The team'?'plans':'runs';return makeQuestion('Which sentence has correct grammar?',`${subject} ${verb} every morning.`,[`${subject} ${verb.replace(/s$/,'')} every morning.`,`${subject} ${verb} every mornings.`,`${subject} ${verb.replace(/s$/,'')} every mornings.`]);}
+ case 8:{const n=nouns[(s+q)%nouns.length],v=places[(s+q+2)%places.length];return makeQuestion('Which sentence has correct subject–verb agreement?',`The ${n} visits the ${v}.`,[`The ${n} visit the ${v}.`,`The ${n} are visiting the ${v}.`,`The ${n} visit the ${v} every.`]);}
+ case 9:{const subject=nouns[(s+q)%nouns.length];const tense=['walked','will walk','is walking','walks'][(q+s)%4];return makeQuestion(`Which verb form correctly completes: “Yesterday, the ${subject} ___ to the harbour.”`,'walked',['will walk','is walking','walks']);}
+ case 10:{const n=nouns[(s+q)%nouns.length],p=places[(s+q+1)%places.length];return makeQuestion('Which sentence is punctuated correctly?',`After lunch, the ${n} walked to the ${p}.`,[`After lunch the ${n}, walked to the ${p}.`,`After, lunch the ${n} walked to the ${p}.`,`After lunch the ${n} walked, to the ${p}.`]);}
+ case 11:{const o=objects[(s+q)%objects.length];return makeQuestion('Which sentence uses the apostrophe correctly?',`The ${o}'s handle was broken.`,[`The ${o}s handle was broken.`,`The ${o}s' handle was broken.`,`The ${o}'s' handle was broken.`]);}
+ case 12:{const n=nouns[(s+q)%nouns.length],p=places[(s+q+2)%places.length];return makeQuestion('Which sentence uses a comma correctly?',`When the ${n} arrived, everyone left the ${p}.`,[`When the ${n} arrived everyone, left the ${p}.`,`When, the ${n} arrived everyone left the ${p}.`,`When the ${n}, arrived everyone left the ${p}.`]);}
+ case 13:{const n=nouns[(s+q)%nouns.length],v=places[(s+q+1)%places.length];return makeQuestion('Which is a complete sentence?',`The ${n} explored the ${v}.`,[`Because the ${n} explored.`,`After exploring the ${v}.`,`While the ${n}.`]);}
+ case 14:{const n=nouns[(s+q)%nouns.length];return makeQuestion('Which sentence is written in the passive voice?',`The mural was painted by the artist.`,[`The artist painted the mural.`,`The artist is painting the mural.`,`The artist will paint the mural.`]);}
+ case 15:{return makeQuestion('Which sentence correctly reports the speech “I am tired,” said Sam?','Sam said that he was tired.',['Sam said that I am tired.','Sam says that he was tired yesterday.','Sam said he is tired yesterday.']);}
+ case 16:{return makeQuestion('Which sentence contains a metaphor?','The moon was a silver coin in the sky.',['The moon was bright tonight.','The moon looked like a coin.','The moon rose above the hill.']);}
+ case 17:{return makeQuestion('Which sentence contains a simile?','The river shone like glass.',['The river was glass.','The river glittered.','The river moved quickly.']);}
+ case 18:{const words=['swift','careful','ancient','vivid','silent'];const w=words[(s+q)%words.length];return makeQuestion(`Which word is the best choice for: “The ${nouns[(q+s)%nouns.length]} made a ${w} decision.”`,w,['large','wooden','yesterday']);}
+ case 19:{const blanks=['hasten','reluctant','vivid','precise','scarce','fortunate','ancient','fragile'];const w=blanks[(s*7+q)%blanks.length];const sentence={hasten:'The cyclist had to — when the rain began.',reluctant:'Maya was — to leave the quiet garden.',vivid:'The painter used — colours in the mural.',precise:'The scientist needed a — measurement.',scarce:'During the drought, clean water became —.',fortunate:'It was — that the map was found.',ancient:'The museum displayed an — stone tablet.',fragile:'The glass ornament was extremely —.'}[w];return makeQuestion(sentence,'—',[w]);}
+ case 20:{const p=makePassage(s,q);return makeQuestion('Which detail is directly stated in the extract?',p.text.split('.')[0]+'.',['The character leaves immediately.','The setting changes completely.','The group ignores the discovery.'],{passage:p.text});}
+ case 21:{const p=makePassage(s,q);return makeQuestion('What can the reader reasonably infer about the character?','They examine the situation carefully before deciding.',['They refuse to learn anything new.','They immediately abandon the task.','They dislike working with others.'],{passage:p.text});}
+ case 22:{const p=makePassage(s,q);const words=p.text.replace(/[^A-Za-z ]/g,'').split(/\s+/).filter(Boolean);const target=words[(seed%Math.max(1,words.length-8))+3];return makeQuestion(`In the extract, what does “${target.toLowerCase()}” most nearly mean?`,target,['a place','a person','an object'],{passage:p.text});}
+ case 23:{const p=makePassage(s,q);return makeQuestion('Which statement best summarises the extract?','A careful observation leads to a useful discovery.',['A competition causes a serious argument.','A character gets lost and never returns.','The extract is mainly a list of unrelated facts.'],{passage:p.text});}
+ case 24:{const p=makePassage(s,q);return makeQuestion('Why was this extract most likely written?','To describe an event and show what the characters learned.',['To give instructions for building a machine.','To advertise a product.','To provide a list of unrelated facts.'],{passage:p.text});}
+ case 25:{const p=makePassage(s,q);return makeQuestion('How is the extract mainly structured?','It introduces a situation, describes an observation and ends with what was learned.',['It lists unrelated dates and statistics.','It gives instructions followed by a recipe.','It presents two characters arguing from start to finish.'],{passage:p.text});}
+ case 26:{const p=makePassage(26,q);return makeQuestion('Which detail is directly stated in the poem?',p.text.split('.')[0]+'.',['The speaker leaves the town.','The poem takes place at midnight.','The river floods the road.'],{passage:p.text});}
+ case 27:{const p=makePassage(27,q);return makeQuestion('What can the reader infer from the poem?',p.poem?'The scene changes gently and creates a thoughtful mood.':'The speaker is thinking carefully about what they see.',['The speaker is angry throughout.','The setting is completely ignored.','Nothing changes in the scene.'],{passage:p.text});}
+ case 28:{const p=makePassage(28,q);return makeQuestion('Which phrase uses imagery to help the reader picture the scene?','silver clouds drift past the roofs',['the town','the road','the morning'],{passage:p.text});}
+ case 29:{const p=makePassage(29,q);return makeQuestion('What mood does the poem create?', 'calm and reflective',['angry and violent','confused and hurried','comic and silly'],{passage:p.text});}
+ case 30:{const p1=makePassage(26,q),p2=makePassage(29,q+1);return makeQuestion('What is a useful comparison between the two extracts?','Both use images from the natural world to create a mood.', ['Both are instructions for a task.','Both are newspaper reports.','Both describe a sporting competition.'],{passage:`Extract A: ${p1.text}\n\nExtract B: ${p2.text}`});}
+ case 31:{const n=nouns[(s+q)%nouns.length],p=places[(s+q+1)%places.length];return makeQuestion('Which edited sentence is correct?',`The ${n} quietly entered the ${p}.`,[`The ${n} quietly enter the ${p}.`,`The ${n} quiet entered the ${p}.`,`The ${n} quietly entered the ${p}`]);}
+ case 32:{const n=nouns[(s+q)%nouns.length],p=places[(s+q+1)%places.length];return makeQuestion('Which sentence is the clearest and most precise?',`The ${n} carried the heavy parcel carefully into the ${p}.`,[`The ${n} did something with it in there.`,`The ${n} went and stuff happened.`,`The ${n} was in the place with it.`]);}
+ case 33:{return makeQuestion('Which sentence best begins a paragraph about preparing for a test?','Before the test, careful preparation can make a big difference.',['The test was yesterday.','My shoes were blue.','The garden had flowers.']);}
+ case 34:{return makeQuestion('Which connective best completes: “It was raining; ___, the match continued.”','however',['because','therefore','unless']);}
+ case 35:{return makeQuestion('Which word is the correct determiner: “___ apple was left on the table.”','An',['A','Some','Those']);}
+ case 36:{return makeQuestion('Which pronoun correctly completes: “Sam and I packed ___ bags.”','our',['their','his','its']);}
+ case 37:{return makeQuestion('Which pair contains an adjective and an adverb?','bright, quickly',['brightly, quick','garden, run','silent, river']);}
+ case 38:{const pairs=[['their','there'],['to','too'],['your','you’re'],['piece','peace']];const p=pairs[(s+q)%pairs.length];return makeQuestion(`Which word correctly completes: “I left it over ___.”`,p[0]==='their'?'there':p[0]==='to'?'too':p[0]==='your'?'you’re':'piece',['their','to','your']);}
+ case 39:sp=spelling[(s+q)%spelling.length];return makeQuestion('Choose the correctly spelt word in context.',`The report was ${sp[0]}.`,[`The report was ${sp[1]}.`,`The report was ${sp[2]}.`,`The report was ${sp[3]}.`]);
+ case 40:pair=syn[(s+q)%syn.length];return makeQuestion(`Vocabulary challenge: which word is closest to “${pair[0]}”?`,pair[1],[syn[(s+q+7)%syn.length][1],syn[(s+q+12)%syn.length][1],syn[(s+q+17)%syn.length][1]]);
+ case 41:{return makeQuestion('Grammar challenge: which sentence is correct?','Neither of the boys was late.',['Neither of the boys were late.','Neither boys was late.','Neither of boys were late.']);}
+ case 42:{const p=makePassage(20,q);return makeQuestion('Reading challenge: which detail is most important to the main event?','The character notices something unusual and investigates it.',['The weather is mentioned briefly.','A minor object is described.','The day ends in the afternoon.'],{passage:p.text});}
+ case 43:{const p=makePassage(26,q);return makeQuestion('Poetry challenge: which image is used in the poem?', 'silver clouds drift past the roofs',['a golden mountain','a red bicycle','a frozen lake'],{passage:p.text});}
+ case 44:{const n=nouns[(s+q)%nouns.length],p=places[(s+q+1)%places.length];return makeQuestion('Mixed English skills: choose the sentence with correct spelling and grammar.',`The ${n} carefully entered the ${p}.`,[`The ${n} carefuly entered the ${p}.`,`The ${n} carefully enter the ${p}.`,`The ${n} carefull entered the ${p}.`]);}
+ case 45:{const p=makePassage(21,q);return makeQuestion('Mixed comprehension: what is the main idea?', 'Careful observation helps the character understand what happened.',['A race decides the outcome.','The character refuses to investigate.','The setting is never described.'],{passage:p.text});}
+ case 46:pair=syn[(s+q+10)%syn.length];return makeQuestion('Mixed vocabulary: which word is closest in meaning?',pair[1],[syn[(s+q+2)%syn.length][1],syn[(s+q+4)%syn.length][1],syn[(s+q+6)%syn.length][1]]);
+ case 47:{return makeQuestion('Mixed grammar: which sentence is correct?','The group has finished its work.',['The group have finished its work.','The group has finish its work.','The group finishing its work.']);}
+ case 48:{const p=makePassage(20,q);return makeQuestion('Exam-style English: what can be inferred?', 'The character values evidence before making a judgement.',['The character guesses without evidence.','The character refuses to investigate.','The character ignores every clue.'],{passage:p.text});}
+ case 49:{const p=makePassage(29,q);return makeQuestion('Final English challenge: which statement best captures the writer’s message?', 'Small details can change how we understand a scene.',['The setting never affects meaning.','Only large events matter.','The speaker avoids noticing anything.'],{passage:p.text});}
+ default:{const p=makePassage(20,q);return makeQuestion('Mastery review: which skill is being tested?', 'Reading comprehension',['Long multiplication','Map scales','Shape rotation'],{passage:p.text});}
+ }
+}
+
+const vrWords=['CAT','DOG','FISH','BOOK','TREE','STAR','MOON','SHIP','RAIN','BIRD','HAND','FIRE','ROAD','MILK','SAND','KING','LAMP','WIND','GAME','TIME'];
+const relations=[['BIRD','NEST'],['DOG','KENNEL'],['BEE','HIVE'],['HORSE','STABLE'],['FISH','WATER'],['BOOK','PAGE'],['TREE','LEAF'],['CAR','ROAD'],['TEACHER','SCHOOL'],['CHEF','KITCHEN'],['PILOT','PLANE'],['SAILOR','SHIP'],['DOCTOR','HOSPITAL'],['ARTIST','CANVAS'],['MUSICIAN','INSTRUMENT'],['FARMER','FIELD']];
+function shiftWord(w,n){return w.split('').map(ch=>String.fromCharCode((ch.charCodeAt(0)-65+n)%26+65)).join('');}
+function verbalQuestion(s,q){const seed=s*10000+q*53+difficultyFor('Verbal Reasoning')*11;const letters='ABCDEFGHIJKLMNOPQRSTUVWXYZ';let a,b,ans,pair,items;
+ switch(s){
+ case 1:pair=syn[(s+q)%syn.length];return makeQuestion(`Which word is closest in meaning to ${pair[0]}?`,pair[1],[syn[(s+q+4)%syn.length][1],syn[(s+q+9)%syn.length][1],syn[(s+q+14)%syn.length][1]]);
+ case 2:pair=ant[(s+q)%ant.length];return makeQuestion(`Which word is the opposite of ${pair[0]}?`,pair[1],[ant[(s+q+4)%ant.length][1],ant[(s+q+9)%ant.length][1],ant[(s+q+14)%ant.length][1]]);
+ case 3:{const r=relations[(s+q)%relations.length];return makeQuestion(`${r[0]} is to ${r[1]} as ${relations[(s+q+5)%relations.length][0]} is to —.`,relations[(s+q+5)%relations.length][1],[relations[(s+q+2)%relations.length][1],relations[(s+q+8)%relations.length][1],relations[(s+q+11)%relations.length][1]]);}
+ case 4:{const r1=relations[(s+q)%relations.length],r2=relations[(s+q+5)%relations.length];return makeQuestion(`${r1[0]} is to ${r1[1]} as ${r2[0]} is to —.`,r2[1],[r1[1],relations[(s+q+8)%relations.length][1],relations[(s+q+11)%relations.length][1]]);}
+ case 5:{items=[vrWords[(seed)%vrWords.length],vrWords[(seed+1)%vrWords.length],vrWords[(seed+2)%vrWords.length],vrWords[(seed+7)%vrWords.length]+'X'];return makeQuestion(`Which word is the odd one out? ${items.join(', ')}`,items[3],items.slice(0,3));}
+ case 6:{const hidden=vrWords[(s+q)%vrWords.length],host=hidden.slice(0,2)+'X'+hidden.slice(2);return makeQuestion(`Which word is hidden inside “${host}”?`,hidden,[vrWords[(s+q+3)%vrWords.length],vrWords[(s+q+6)%vrWords.length],vrWords[(s+q+9)%vrWords.length]]);}
+ case 7:{const x=vrWords[(s+q)%vrWords.length],y=vrWords[(s+q+1)%vrWords.length];return makeQuestion(`Which word can be formed by joining ${x.toLowerCase()} + ${y.toLowerCase()}?`,x.toLowerCase()+y.toLowerCase(),[x.toLowerCase()+x.toLowerCase(),y.toLowerCase()+x.toLowerCase(),'combined word']);}
+ case 8:{const w=vrWords[(s+q)%vrWords.length],rev=w.split('').reverse().join('');return makeQuestion(`Rearrange the letters of ${w} to make the same word backwards.`,rev,[shiftWord(w,1),shiftWord(w,2),w]);}
+ case 9:{const start=letters[(seed)%26],step=2+(seed%5),idx=(start.charCodeAt(0)-65+4*step)%26;return makeQuestion(`Find the next letter: ${start}, ${letters[(start.charCodeAt(0)-65+step)%26]}, ${letters[(start.charCodeAt(0)-65+2*step)%26]}, ${letters[(start.charCodeAt(0)-65+3*step)%26]}, —`,letters[idx],[letters[(idx+1)%26],letters[(idx-1+26)%26],start]);}
+ case 10:{a=randInt(2,15,seed);b=randInt(2,9,seed+1);return makeQuestion(`What comes next? ${a}, ${a+b}, ${a+2*b}, ${a+3*b}, —`,a+4*b,[a+3*b,a+5*b,a*b]);}
+ case 11:{const w=vrWords[(s+q)%vrWords.length],shift=1+(seed%5);return makeQuestion(`Each letter moves ${shift} place${shift===1?'':'s'} forward. What is the code for ${w}?`,shiftWord(w,shift),[shiftWord(w,shift+1),shiftWord(w,Math.max(1,shift-1)),w]);}
+ case 12:{const w=vrWords[(s+q)%vrWords.length];return makeQuestion(`If A=1, B=2, … what is the code value of the first letter of ${w}?`,w.charCodeAt(0)-64,[w.length,w.charCodeAt(0)-63,w.charCodeAt(0)-65]);}
+ case 13:{const words=['apple','apricot','banana','berry','carrot'];const order=[...words].sort();return makeQuestion(`Which word comes first alphabetically: ${words.join(', ')}?`,order[0],[order[1],order[2],order[3]]);}
+ case 14:{const set=['sparrow','eagle','robin','oak'];return makeQuestion(`Which word does not belong with the others? ${set.join(', ')}`,'oak',['sparrow','eagle','robin']);}
+ case 15:{const w=vrWords[(s+q)%vrWords.length],missing=w[(q+s)%w.length];return makeQuestion(`Which letter is missing from ${w.replace(missing,'_')}?`,missing,[letters[(missing.charCodeAt(0)-65+1)%26],letters[(missing.charCodeAt(0)-65+2)%26],letters[(missing.charCodeAt(0)-65+3)%26]]);}
+ case 16:{const w=vrWords[(s+q)%vrWords.length],missing=w[(q+1)%w.length];return makeQuestion(`Complete the word ${w.replace(missing,'_')}.`,missing,[letters[(missing.charCodeAt(0)-65+1)%26],letters[(missing.charCodeAt(0)-65+2)%26],letters[(missing.charCodeAt(0)-65+3)%26]]);}
+ case 17:{const w=vrWords[(s+q)%vrWords.length];return makeQuestion(`Rearrange ${w} to make the same letters in reverse order.`,w.split('').reverse().join(''),[shiftWord(w,1),w,shiftWord(w,2)]);}
+ case 18:{const r=relations[(s+q)%relations.length];return makeQuestion(`A ${r[0].toLowerCase()} is found in a ${r[1].toLowerCase()}. Where would you expect a ${relations[(s+q+3)%relations.length][0].toLowerCase()}?`,relations[(s+q+3)%relations.length][1],[r[1],relations[(s+q+6)%relations.length][1],relations[(s+q+9)%relations.length][1]]);}
+ case 19:{const w=vrWords[(s+q)%vrWords.length],shift=2+(seed%4);return makeQuestion(`A code moves every letter ${shift} places forward. What is the coded form of ${w}?`,shiftWord(w,shift),[shiftWord(w,shift+1),shiftWord(w,shift-1),w]);}
+ case 20:{const types=[1,2,3,4,5];const t=types[q%types.length];return verbalQuestion(t,q);}
+ case 21:pair=syn[(s+q)%syn.length];return makeQuestion(`Synonym challenge: closest meaning of ${pair[0]}?`,pair[1],[syn[(s+q+5)%syn.length][1],syn[(s+q+10)%syn.length][1],syn[(s+q+15)%syn.length][1]]);
+ case 22:pair=ant[(s+q)%ant.length];return makeQuestion(`Antonym challenge: opposite of ${pair[0]}?`,pair[1],[ant[(s+q+5)%ant.length][1],ant[(s+q+10)%ant.length][1],ant[(s+q+15)%ant.length][1]]);
+ case 23:{const r=relations[(s+q)%relations.length],r2=relations[(s+q+4)%relations.length];return makeQuestion(`${r[0]} : ${r[1]} :: ${r2[0]} : —`,r2[1],[r[1],relations[(s+q+8)%relations.length][1],relations[(s+q+12)%relations.length][1]]);}
+ case 24:{const start=randInt(1,20,seed),step=randInt(2,9,seed+1);return makeQuestion(`Sequence challenge: ${start}, ${start+step}, ${start+2*step}, ${start+3*step}, —`,start+4*step,[start+step,start+3*step,start+5*step]);}
+ case 25:{return verbalQuestion(14,q+3);}
+ case 26:{return verbalQuestion(6,q+5);}
+ case 27:pair=syn[(s+q+12)%syn.length];return makeQuestion(`Which word has the closest meaning to ${pair[0]}?`,pair[1],[syn[(s+q+2)%syn.length][1],syn[(s+q+4)%syn.length][1],syn[(s+q+6)%syn.length][1]]);
+ case 28:{const start=letters[(seed)%26],step=3+(seed%4),idx=(start.charCodeAt(0)-65+5*step)%26;return makeQuestion(`Letter logic: ${start}, ${letters[(start.charCodeAt(0)-65+step)%26]}, ${letters[(start.charCodeAt(0)-65+2*step)%26]}, ${letters[(start.charCodeAt(0)-65+3*step)%26]}, —`,letters[idx],[letters[(idx+2)%26],letters[(idx+3)%26],start]);}
+ case 29:{a=randInt(3,12,seed);b=randInt(2,8,seed+1);return makeQuestion(`Number logic: if n = ${a}, what is 2n + ${b}?`,2*a+b,[a+b,2*(a+b),a*b]);}
+ case 30:return verbalQuestion(5,q+7);
+ case 31:pair=syn[(s+q+3)%syn.length];return makeQuestion(`In context, which word is closest to ${pair[0]}?`,pair[1],[syn[(s+q+8)%syn.length][1],syn[(s+q+13)%syn.length][1],syn[(s+q+18)%syn.length][1]]);
+ case 32:pair=syn[(s+q+6)%syn.length];return makeQuestion(`Closest meaning: ${pair[0]} means —`,pair[1],[syn[(s+q+1)%syn.length][1],syn[(s+q+2)%syn.length][1],syn[(s+q+3)%syn.length][1]]);
+ case 33:pair=ant[(s+q+6)%ant.length];return makeQuestion(`Opposite meaning: ${pair[0]} means —`,pair[1],[ant[(s+q+1)%ant.length][1],ant[(s+q+2)%ant.length][1],ant[(s+q+3)%ant.length][1]]);
+ case 34:{const r=relations[(s+q)%relations.length];return makeQuestion(`Word connection: ${r[0]} belongs with ${r[1]}. Which pair has the same relationship?`,`${relations[(s+q+4)%relations.length][0]} – ${relations[(s+q+4)%relations.length][1]}`,[`${r[0]} – ${r[1]}`,`${relations[(s+q+8)%relations.length][0]} – ${relations[(s+q+8)%relations.length][1]}`,`${relations[(s+q+12)%relations.length][0]} – ${relations[(s+q+12)%relations.length][1]}`]);}
+ case 35:{const r=relations[(s+q)%relations.length];return makeQuestion(`Pair completion: ${r[0]} : ${r[1]} :: BIRD : —`,'NEST',[r[1],'ROAD','FIELD']);}
+ case 36:{const r1=relations[(s+q)%relations.length],r2=relations[(s+q+5)%relations.length],r3=relations[(s+q+10)%relations.length];return makeQuestion(`${r1[0]} is linked to ${r1[1]}, and ${r2[0]} to ${r2[1]}. What is ${r3[0]} linked to?`,r3[1],[r1[1],r2[1],relations[(s+q+13)%relations.length][1]]);}
+ case 37:{const r1=relations[(s+q)%relations.length],r2=relations[(s+q+3)%relations.length],r3=relations[(s+q+6)%relations.length],r4=relations[(s+q+9)%relations.length];return makeQuestion(`Four-word relationship: ${r1[0]}:${r1[1]} and ${r2[0]}:${r2[1]}. Which completes the pattern?`,`${r3[0]}:${r3[1]}`,[`${r4[0]}:${r4[1]}`,`${r1[0]}:${r2[1]}`,`${r2[0]}:${r3[1]}`]);}
+ case 38:return verbalQuestion(9,q+9);
+ case 39:{const r=relations[(s+q)%relations.length];return makeQuestion(`Deduction: If every ${r[0].toLowerCase()} is linked to a ${r[1].toLowerCase()}, what is true?`,`A ${r[0].toLowerCase()} can be linked to a ${r[1].toLowerCase()}.`,['Every animal is a bird.','No object has a relationship.','Every word means the same thing.']);}
+ case 40:{const a=randInt(2,9,seed),b=randInt(2,9,seed+1);return makeQuestion(`Conditional logic: if a rule says add ${a} and then multiply by ${b}, what is the result for 2?`,(2+a)*b,[2+a*b,2*b+a,a*b]);}
+ case 41:{const a=randInt(2,9,seed),b=randInt(2,9,seed+1);return makeQuestion(`Multi-step logic: start at ${a}, add ${b}, then double the result.`,2*(a+b),[2*a+b,a+b*2,2*a*b]);}
+ case 42:{return verbalQuestion(20,q+2);}
+ case 43:{return verbalQuestion(19,q+4);}
+ case 44:{pair=syn[(s+q+20)%syn.length];return makeQuestion(`Advanced vocabulary: ${pair[0]} is closest to —`,pair[1],[syn[(s+q+3)%syn.length][1],syn[(s+q+7)%syn.length][1],syn[(s+q+11)%syn.length][1]]);}
+ case 45:return verbalQuestion(11,q+11);
+ case 46:return verbalQuestion(9,q+13);
+ case 47:return verbalQuestion(23,q+15);
+ case 48:{const r=relations[(s+q)%relations.length];return makeQuestion(`Final verbal challenge: ${r[0]} is to ${r[1]} as ${relations[(s+q+7)%relations.length][0]} is to —.`,relations[(s+q+7)%relations.length][1],[r[1],relations[(s+q+10)%relations.length][1],relations[(s+q+13)%relations.length][1]]);}
+ default:return verbalQuestion(20,q+20);
+ }
+}
+
+const shapes=['▲','●','■','◆','★','⬟','○','△','□','◇'],dirs=['↑','→','↓','←'];
+function nvrQuestion(s,q){const seed=s*10000+q*47+difficultyFor('Non-Verbal Reasoning')*9;const sh=i=>shapes[(seed+i)%shapes.length],dir=i=>dirs[(seed+i)%4];let a,b,c,ans;
+ switch(s){
+ case 1:a=sh(0);b=sh(1);return makeQuestion(`Shape series: ${a} ${b} ${a} ${b} ${a} —`,b,[a,sh(2),sh(3)],{type:'visual'});
+ case 2:a=dir(0);b=dir(1);c=dir(2);ans=dir(3);return makeQuestion(`Rotation: ${a} → ${b} → ${c} → —`,ans,dirs.filter(x=>x!==ans),{type:'visual'});
+ case 3:a=dir(0);ans=dir(2);return makeQuestion(`Reflection: a symbol points ${a}. Which direction is its mirror image?`,ans,dirs.filter(x=>x!==ans),{type:'visual'});
+ case 4:a=sh(0);b=sh(3);return makeQuestion(`Shape analogy: ${a} changes to ${b}. Which shape is the next matching transformation?`,sh(6),[sh(1),sh(2),sh(4)],{type:'visual'});
+ case 5:a=sh(0);b=sh(1);c=sh(2);return makeQuestion(`Odd one out: ${a}, ${b}, ${c}, ${sh(0)}, ${sh(1)}, ${sh(5)}. Which breaks the repeating pattern?`,sh(5),[a,b,c],{type:'visual'});
+ case 6:return makeQuestion(`Classification: which symbol belongs with the group ${sh(0)}, ${sh(2)}, ${sh(4)}?`,sh(6),[sh(1),sh(3),sh(5)],{type:'visual'});
+ case 7:return makeQuestion(`Matrix pattern: ${sh(0)} → ${sh(1)}; ${sh(2)} → ${sh(3)}; ${sh(4)} → —`,sh(5),[sh(0),sh(2),sh(4)],{type:'visual'});
+ case 8:return makeQuestion(`Missing shape: ${sh(0)} ${sh(1)} ${sh(2)} ${sh(3)} —`,sh(4),[sh(0),sh(1),sh(2)],{type:'visual'});
+ case 9:{const count=2+(seed%7);return makeQuestion(`Shape counting: how many ${sh(0)} symbols are shown if there are ${count} groups of one?`,count,[count+1,count+2,count+3],{type:'visual'});}
+ case 10:return makeQuestion(`Pattern completion: ${sh(0)} ${sh(1)} ${sh(0)} ${sh(1)} —`,sh(0),[sh(1),sh(2),sh(3)],{type:'visual'});
+ case 11:return makeQuestion(`Position change: a square moves two places right from position ${2+(seed%4)}. What is its new position?`,4+(seed%4),[2+(seed%4),3+(seed%4),5+(seed%4)],{type:'visual'});
+ case 12:return makeQuestion(`Direction change: an arrow points ${dir(0)} and turns one quarter-turn clockwise. Where does it point?`,dir(1),dirs.filter(x=>x!==dir(1)),{type:'visual'});
+ case 13:{const sizes=['small','medium','large'];return makeQuestion(`Size change: a symbol goes ${sizes[0]} → ${sizes[1]} → ${sizes[2]} → —. What comes next?`,'extra-large',['small','medium','large'],{type:'visual'});}
+ case 14:return makeQuestion(`Shading pattern: filled, empty, filled, empty, —. What comes next?`,'filled',['empty','striped','half-filled'],{type:'visual'});
+ case 15:{const line=seed%2?'horizontal':'vertical';return makeQuestion(`Line pattern: ${line}, perpendicular, ${line}, perpendicular, —. What orientation comes next?`,line,['perpendicular','diagonal','curved'],{type:'visual'});}
+ case 16:return makeQuestion(`Shape combination: combining ${sh(0)} and ${sh(1)} creates a two-symbol group. Which pair repeats it?`,`${sh(0)} + ${sh(1)}`,[`${sh(1)} + ${sh(0)}`,`${sh(0)} + ${sh(2)}`,`${sh(2)} + ${sh(1)}`],{type:'visual'});
+ case 17:return makeQuestion(`Shape subtraction: if a group contains ${sh(0)} and ${sh(1)} and ${sh(2)}, removing ${sh(1)} leaves —.`,`${sh(0)} + ${sh(2)}`,[`${sh(1)} + ${sh(2)}`,`${sh(0)} + ${sh(1)}`,`${sh(2)}`],{type:'visual'});
+ case 18:return makeQuestion(`Shape addition: ${sh(0)} + ${sh(1)} gives a pair. Adding ${sh(2)} gives —.`,`${sh(0)} + ${sh(1)} + ${sh(2)}`,[`${sh(0)} + ${sh(2)}`,`${sh(1)} + ${sh(2)}`,`${sh(0)} + ${sh(1)}`],{type:'visual'});
+ case 19:return makeQuestion(`Symmetry: which shape arrangement has matching left and right halves?`,`A B A`,[`A B C`,`A C B`,`A B D`],{type:'visual'});
+ case 20:return makeQuestion(`Transformation: a triangle is turned 180°. Which direction is equivalent?`,'opposite direction',['same direction','quarter-turn only','random direction'],{type:'visual'});
+ case 21:return nvrQuestion(1,q+3);
+ case 22:return nvrQuestion(4,q+4);
+ case 23:return nvrQuestion(7,q+5);
+ case 24:return nvrQuestion(6,q+6);
+ case 25:return nvrQuestion(2,q+7);
+ case 26:return nvrQuestion(3,q+8);
+ case 27:return nvrQuestion(10,q+9);
+ case 28:return nvrQuestion(9,q+10);
+ case 29:return makeQuestion(`Spatial logic: a shape moves right, then down, then left. Which direction should it move next to return to its starting column?`,'up',['right','down','left'],{type:'visual'});
+ case 30:return makeQuestion(`Position logic: if a symbol moves from top-left to top-right, the next equal move is —.`,'bottom-right',['bottom-left','top-left','centre'],{type:'visual'});
+ case 31:return makeQuestion(`Shape code: ▲ = 1, ● = 2, ■ = 3. What code is ▲ + ■?`,4,[3,5,6],{type:'visual'});
+ case 32:return makeQuestion(`Symbol code: ○ = A, △ = B, □ = C. Which symbol represents C?`,'□',['○','△','◆'],{type:'visual'});
+ case 33:return nvrQuestion(1,q+11);
+ case 34:return nvrQuestion(1,q+12);
+ case 35:return nvrQuestion(4,q+13);
+ case 36:return nvrQuestion(6,q+14);
+ case 37:return nvrQuestion(7,q+15);
+ case 38:return nvrQuestion(20,q+16);
+ case 39:return makeQuestion(`Multi-step pattern: a symbol turns 90° clockwise twice. What total turn has occurred?`,'180°',['90°','270°','360°'],{type:'visual'});
+ case 40:return nvrQuestion(8,q+17);
+ case 41:return nvrQuestion(1,q+18);
+ case 42:return nvrQuestion(21,q+19);
+ case 43:return nvrQuestion(23,q+20);
+ case 44:return nvrQuestion(22,q+21);
+ case 45:return nvrQuestion(24,q+22);
+ case 46:return nvrQuestion(29,q+23);
+ case 47:return nvrQuestion(33,q+24);
+ case 48:return nvrQuestion(20,q+25);
+ case 49:return makeQuestion(`Final challenge: a pattern repeats every 3 symbols. If the first three are ${sh(0)}, ${sh(1)}, ${sh(2)}, what is the sixth?`,sh(2),[sh(0),sh(1),sh(3)],{type:'visual'});
+ default:return nvrQuestion(20,q+26);
+ }
+}
+
+function generateQuestion(subject,s,q){let item=subject==='Maths'?mathsQuestion(s,q):subject==='English'?englishQuestion(s,q):subject==='Verbal Reasoning'?verbalQuestion(s,q):nvrQuestion(s,q);return item}
+function createSectionQuestions(subject,s){const out=[];for(let q=0;q<20;q++)out.push(generateQuestion(subject,s,q));return out}
+function validateBank(){const seen=new Set();let count=0,dupes=0;for(const subject of Object.keys(sectionNames)){for(let s=1;s<=50;s++){for(let q=0;q<20;q++){const item=generateQuestion(subject,s,q),key=subject+'|'+item.question;if(seen.has(key))dupes++;seen.add(key);count++}}}console.log(`11+ Prep bank check: ${count} questions, ${dupes} duplicate prompts.`);}
+
+function progressKey(s){return `11plus_${currentSubject}_section_${s}`}
+function saveSectionProgress(){localStorage.setItem(progressKey(currentSection),'complete')}
+function updateOverallProgress(){let done=0;for(let s=1;s<=50;s++)if(localStorage.getItem(progressKey(s))==='complete')done+=20;const pct=done/1000*100;if($('overallText'))$('overallText').textContent=`${done} / 1000 questions completed`;if($('overallFill'))$('overallFill').style.width=pct+'%'}
+function goHome(){showScreen('home')}
+function goSections(){openSections(currentSubject)}
+function openSections(subject){currentSubject=subject;$('subjectTitle').textContent=subject;showScreen('sections');buildSections();updateOverallProgress()}
+function buildSections(){const grid=$('sectionGrid');grid.innerHTML='';const icons=['🧠','💎','⭐','🎯','🚀','📚','🧩','🏆','💡','🔥'];for(let i=1;i<=50;i++){const b=document.createElement('button');b.className='section-button';const locked=i>FREE_SECTIONS,complete=localStorage.getItem(progressKey(i))==='complete';const name=sectionNames[currentSubject][i-1];b.innerHTML=`<div class="section-icon">${locked?'🔒':icons[(i-1)%icons.length]}</div><div class="section-number">${name}</div><div class="section-status">${locked?'Locked':complete?'✓ Completed':'20 Questions'}</div>`;b.onclick=()=>locked?( $('lockedSection').textContent=name,showScreen('locked')):startQuiz(i);grid.appendChild(b)}}
+function startQuiz(s){currentSection=s;currentQuestion=0;currentScore=0;answered=false;questions=createSectionQuestions(currentSubject,s);$('quizSubject').textContent=currentSubject;$('quizSection').textContent=sectionNames[currentSubject][s-1];showScreen('quiz');loadQuestion()}
+function loadQuestion(){const item=questions[currentQuestion];answered=false;$('qNumber').textContent=currentQuestion+1;$('quizCount').textContent=`Question ${currentQuestion+1} of 20`;$('question').textContent=item.question;$('feedback').textContent='';$('nextButton').disabled=true;$('nextButton').textContent='Select an answer';const box=$('comprehensionBox'),passage=$('comprehensionText');if(item.passage){box.classList.add('visible');passage.textContent=item.passage}else{box.classList.remove('visible');passage.textContent=''}$('answers').innerHTML='';item.options.forEach((op,i)=>{const b=document.createElement('button');b.className='answer';b.textContent=op;b.onclick=()=>selectAnswer(i);$('answers').appendChild(b)});$('quizFill').style.width=((currentQuestion+1)/20*100)+'%'}
+function selectAnswer(index){if(answered)return;answered=true;const item=questions[currentQuestion],buttons=[...document.querySelectorAll('#answers .answer')];buttons.forEach((b,i)=>{b.disabled=true;if(i===item.options.indexOf(item.answer))b.classList.add('correct')});const correct=item.options[index]===item.answer;if(correct){currentScore++;$('feedback').textContent='✓ Correct! The answer is right.'}else{buttons[index].classList.add('wrong');$('feedback').textContent=`✗ Not quite. The correct answer is ${item.answer}.`};recordAdaptive(correct);$('nextButton').disabled=false;$('nextButton').textContent=currentQuestion===19?'See Results →':'Next Question →'}
+function nextQuestion(){if(!answered)return;if(currentQuestion<19){currentQuestion++;loadQuestion()}else finishQuiz()}
+function finishQuiz(){saveSectionProgress();$('finalScore').textContent=`${currentScore}/20`;const pct=Math.round(currentScore/20*100);$('finalPercentage').textContent=pct+'%';$('resultMessage').textContent=pct>=90?'Excellent work! Your next questions will become a little more challenging.':pct>=70?'Great job! Keep going — the difficulty will adjust gradually.':pct>=50?'Good effort! Keep practising and the difficulty will adjust to help you improve.':'Keep practising — the questions will ease slightly so you can build confidence.';showScreen('results')}
+function nextSection(){const n=currentSection+1;if(n<=5)startQuiz(n);else if(n<=50){$('lockedSection').textContent=sectionNames[currentSubject][n-1];showScreen('locked')}else goSections()}
+function showDemoUnlock(){showScreen('unlock')}
+function demoUnlock(){alert('Demo unlock activated! No payment has been taken.');goSections()}
+document.addEventListener('DOMContentLoaded',()=>{showScreen('home');validateBank()});
+window.openSections=openSections;window.startQuiz=startQuiz;window.selectAnswer=selectAnswer;window.nextQuestion=nextQuestion;window.nextSection=nextSection;window.goHome=goHome;window.goSections=goSections;window.showDemoUnlock=showDemoUnlock;window.demoUnlock=demoUnlock;
+</script>
+
+</body>
+</html>
